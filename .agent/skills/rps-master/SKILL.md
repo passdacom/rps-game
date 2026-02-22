@@ -73,6 +73,7 @@ To design and develop a fast-paced, client-side webcam Rock-Paper-Scissors game 
 - **ALWAYS** request camera permissions before initializing MediaPipe to avoid race conditions.
 - **ALWAYS** mirror (flip) the canvas horizontally when rendering the user's webcam feed using `ctx.scale(-1, 1)` for a natural selfie-view.
 - **COUNTDOWN POLLING**: Fast gestures can be missed if checking exactly at 0ms. ALWAYS continuously poll and record the last valid gesture during the final 1-2 seconds of the countdown.
+- **MOBILE RESPONSIVENESS**: Arcade UIs with side-by-side arenas collapse on mobile. ALWAYS use media queries to switch `battle-arena` to `flex-direction: column` and scale down large fonts (e.g., `giant-text`) to fit within 320px-480px widths.
 
 ## Key File Structure (Reference)
 
